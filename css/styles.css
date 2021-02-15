@@ -7,11 +7,24 @@
   --prymeri-bgc--: #2f303a;
   --white-bgc--: #f5f4fa;
 }
+
 body {
   display: block;
 }
-img {
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0  ;
+}
+img{
   display: block;
+}
+p{
+  margin: 0;
+}
+
+h1,h2,h3 {
+  margin: 0 auto;
 }
 
 /*header*/
@@ -139,8 +152,8 @@ header {
 .auth-nav .link-auth:hover,
 .auth-nav .link-auth:focus {
   color: var(--accent-color--);
-  transition-duration: .2s;
-  outline: 0;
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
+    outline: 0;
 }
 
 /*hero*/
@@ -401,8 +414,7 @@ header {
   background-color: var(--accent-color--);
   fill:var(--wite-color--);
   outline: 0;
-  transition-duration: .3s;
-}
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);}
 
 .regular h2{
   font-family: "Roboto";
@@ -439,8 +451,7 @@ header {
   border-color: var(--accent-color--);
   fill:var(--accent-color--);
   outline: 0;
-  transition-duration: .3s;
-}
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);}
 
 /*footer*/
 footer{
@@ -503,8 +514,7 @@ height: 44px;
 .social-icons-footer a:focus,
 .social-icons-footer a:hover {
   background-color:var(--accent-color--);
-  transition-duration: .3s;
-  outline: 0;
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);  outline: 0;
 }
 
 footer h3{
@@ -524,6 +534,7 @@ footer h3{
 }
 
 .logo:focus{
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
   outline: 0;
 }
 
@@ -574,9 +585,8 @@ footer h3{
 .portfolio-conteiner a:focus{
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  outline: 0;
-  transition-duration: .3s;
-  outline: 0;
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
+    outline: 0;
 }
 
   .portfolio-bottom {
@@ -624,6 +634,7 @@ footer h3{
 .portfolio-conteiner li:hover .portfolio-text,
 .portfolio-conteiner a:focus .portfolio-text{
   top: 0;
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*кнопки портфолио навигация*/
 
@@ -649,8 +660,7 @@ footer h3{
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  transition-duration: .3s;
-  outline: 0;
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);  outline: 0;
 }
 
 /*Список Робот*/
@@ -710,6 +720,7 @@ footer h3{
   margin-right: 8px;
 }
 .close-btn:focus{
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
 .is-hidden{
