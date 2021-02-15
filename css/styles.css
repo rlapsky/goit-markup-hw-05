@@ -10,6 +10,9 @@
 body {
   display: block;
 }
+img {
+  display: block;
+}
 
 /*header*/
 header {
@@ -39,8 +42,8 @@ header {
 }
 
 .site-nav a {
-  display: flex;
-  height: 80px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   align-items: center;
 }
 
@@ -105,11 +108,20 @@ header {
 
 .site-nav .current {
   color: var(--accent-color--);
+  position: relative;
 }
-.current::after{
-  background: #2196F3;
+
+.site-nav .current::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color--);
   border-radius: 2px;
 }
+
 
 .auth-nav .link-auth {
   text-decoration: none;
@@ -134,11 +146,14 @@ header {
 /*hero*/
 
 .hero {
+  background-size: cover;
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg) no-repeat center;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .hero h1 {
@@ -269,6 +284,27 @@ header {
 .wwd-work {
   display: flex;
   justify-content: space-between;
+}
+
+.wwd-work li{
+  position: relative;
+}
+
+.wwd-work h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  font-family: Roboto;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color:var(--wite-color--);
 }
 
 /*team*/
@@ -531,7 +567,7 @@ footer h3{
 
 .portfolio-conteiner li {
   margin: 15px;
-  
+  position: relative; 
 }
 
 .portfolio-conteiner a:hover,
@@ -543,12 +579,13 @@ footer h3{
   outline: 0;
 }
 
-  .portfolio-conteiner div {
+  .portfolio-bottom {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
     background: #FFFFFF;
     border: 1px  solid #EEEEEE;
+    border-top:none;  
   }
 
 .portfolio-conteiner img {
@@ -560,6 +597,34 @@ footer h3{
   text-decoration: none;
 }
 
+.portfolio-text {
+  position: absolute;
+  width: 370px;
+  height: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  background: rgba(33, 150, 243, 0.9);
+  top: 100%;
+  transition: 250ms top linear;
+  
+}
+.description{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.portfolio-conteiner li:hover .portfolio-text,
+.portfolio-conteiner a:focus .portfolio-text{
+  top: 0;
+}
 /*кнопки портфолио навигация*/
 
 .portfolio-buton {
